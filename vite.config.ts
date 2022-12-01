@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import copy from 'rollup-plugin-copy';
-import {resolve} from "path";
+import path from "path";
 import ViteHMRChromeExtension from "./extend/ViteHMRChromeExtension";
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,22 +19,26 @@ export default defineConfig({
         targets:[
           {
             src:'./manifest.json',dest:'dist'
-          }
+          },
+            {
+                src:'./build/content_script.js',
+                dest:'dist'
+            }
         ],
         hook: 'writeBundle',
       }),
   ],
     build:{
         cssCodeSplit: false,
-        brotliSize: false,
+        reportCompressedSize: false,
         rollupOptions:{
             input:{
-                background:resolve(__dirname,'src/background.ts'),
-                content:resolve(__dirname,'src/content/main.ts')
+                background:path.resolve(__dirname,'src/background.ts'),
+                content:path.resolve(__dirname,'src/content/main.ts')
             },
             output:{
                 entryFileNames:'[name].js',
-                chunkFileNames: `[name].js`,
+                chunkFileNames: `src/package/[name].js`,
                 assetFileNames: `[name].[ext]`,
             }
         },
