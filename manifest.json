@@ -22,6 +22,6 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "permissions": ["webRequest"],
+  "permissions": ["webRequest","printerProvider","printing"],
   "host_permissions": ["<all_urls>"]
 }
