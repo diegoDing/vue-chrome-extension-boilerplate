@@ -1,12 +1,13 @@
 <template>
   <div class="test-a">
     <span @click="handleTestPrint">测试打印</span>
+    <span @click="handleTestPrint">asdas</span>
   </div>
 </template>
 
 <script lang="ts" setup>
 function handleTestPrint() {
-  console.log('test')
+  console.log('testqf')
 }
 </script>
 
