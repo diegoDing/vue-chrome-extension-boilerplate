@@ -1,5 +1,7 @@
-// @ts-ignore
-import { test } from './content/test';
-test();
-console.log('backgroun就绪', import.meta.env.DEV);
+import './dev/HotUpdateService';
+console.log(chrome.printerProvider, 'sa');
+chrome.printerProvider.onPrintRequested.addListener((printJob, resultCallback) => {
+    console.log('printJob', printJob);
+    console.log('resultCallback', resultCallback);
+});
 //# sourceMappingURL=background.js.map

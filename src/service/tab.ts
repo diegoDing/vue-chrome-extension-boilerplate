@@ -1,3 +1,3 @@
-export async function getAllTabs(){
-    return await chrome.tabs.query({})
+export async function getAllTabs() {
+  return await chrome.tabs.query({})
 }

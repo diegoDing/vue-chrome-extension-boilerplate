@@ -1,27 +1,22 @@
 <template>
   <div class="test-a">
-    <a @click="handleTestPrint">测试打印</a>
+    <span @click="handleTestPrint">测试打印</span>
   </div>
 </template>
 
-<script>
-export default {
-  name: "index",
-  methods:{
-    handleTestPrint(){
-      console.log('handleTestPrint')
-    }
-  }
+<script lang="ts" setup>
+function handleTestPrint() {
+  console.log('test')
 }
 </script>
 
 <style scoped>
-.test-a{
+.test-a {
   position: absolute;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   width: 200px;
   height: 200px;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
 }
 </style>

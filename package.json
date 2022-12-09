@@ -9,13 +9,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/ws": "^8.5.3",
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.203",
     "@types/node": "^18.0.6",
+    "@types/ws": "^8.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
     "@vitejs/plugin-vue": "^3.0.0",
+    "eslint": "8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.8.0",
+    "prettier": "^2.8.1",
     "rollup-plugin-copy": "^3.4.0",
     "typescript": "^4.6.4",
     "vite": "^3.0.0",

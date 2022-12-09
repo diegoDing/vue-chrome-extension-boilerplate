@@ -18,10 +18,10 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["style.css","content.js","src/package/*"],
+      "resources": ["style.css", "content.js", "src/package/*"],
       "matches": ["<all_urls>"]
     }
   ],
-  "permissions": ["webRequest","printerProvider","printing"],
+  "permissions": ["webRequest", "printerProvider", "printing", "devtools_page"],
   "host_permissions": ["<all_urls>"]
 }
